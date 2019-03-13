@@ -85,7 +85,7 @@ public class VectorTest {
 		ch.epfl.dias.ops.vector.Scan scan = new ch.epfl.dias.ops.vector.Scan(columnstoreOrder, standardVectorsize);
 		ch.epfl.dias.ops.vector.Select sel = new ch.epfl.dias.ops.vector.Select(scan, BinaryOp.EQ, 0, 6);
 		ch.epfl.dias.ops.vector.ProjectAggregate agg = new ch.epfl.dias.ops.vector.ProjectAggregate(sel,
-				Aggregate.COUNT, DataType.INT, 2);
+				Aggregate.COUNT, DataType.STRING, 2);
 
 		agg.open();
 		DBColumn[] result = agg.next();
